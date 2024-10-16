@@ -7,23 +7,27 @@
     <script>
         // Função que verifica a resposta
         function verificarResposta() {
+            // Pegando o valor do campo de texto
             var resposta = document.getElementById("sim").value.trim(); // Remove espaços extras
-            var respostaCerta = "sim";  // A resposta correta é "sim"
+            var respostaCerta = "sim";  // Resposta correta é "sim"
 
-            // Converte ambas as respostas para minúsculas para comparar corretamente
+            // Verificação da resposta, ignorando letras maiúsculas e minúsculas
             if (resposta.toLowerCase() === respostaCerta.toLowerCase()) {
                 // Se a resposta estiver certa, redireciona para o YouTube
-                window.location.href = "https://www.youtube.com/watch?v=https://youtu.be/ivHE7pQEEHI?si=PYGpLBRo1BTCIWaV";  // Coloque o link da música aqui
+                alert("Resposta correta! Redirecionando para a música...");
+                window.location.href = "https://www.youtube.com/watch?v=link_da_musica";  // Coloque o link correto da música aqui
             } else {
                 // Se a resposta estiver errada, mostra uma mensagem de erro
-                alert("Resposta incorreta. Tente novamente!");
+                alert("Resposta incorreta. Por favor, tente novamente.");
             }
         }
     </script>
 </head>
 <body>
-    <h1>Oi gatinha, estou com saudades de você! Você aceita ouvir uma música? Sim ou não?</h1> <!-- Sua pergunta -->
-    <input type="text" id="sim" placeholder="Digite sua resposta aqui"> <!-- Campo para digitar a resposta -->
-    <button onclick="verificarResposta()">Enviar</button> <!-- Botão que chama a função para verificar -->
+    <h1>Oi, meu amor! Eu tenho uma surpresa para voce:</h1> <!-- Pergunta carinhosa -->
+    <p>Você aceita ouvir uma música que escolhi especialmente pra você? <strong>Sim ou não?</strong></p> <!-- Pergunta mais afetuosa -->
+    <input type="text" id="sim" placeholder="Digite sua resposta aqui"> <!-- Campo de resposta -->
+    <button onclick="verificarResposta()">Enviar</button> <!-- Botão para verificar a resposta -->
 </body>
 </html>
+
