@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para você</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Oi, gatinha! Tenho uma surpresa pra vc:</h1>
+    <p>Aceita ouvir uma musica?Responda com sim ou nao</p>
+    <input type="text" id="sim" placeholder="sim">
+    <button onclick="submitAnswer()">Responder</button>
+
+    <script>
+        function submitAnswer() {
+            var answer = document.getElementById('answer').value.trim().toLowerCase();
+            var correctAnswer = "oasis";  // Resposta correta aqui
+
+            if (answer === "") {
+                alert("Por favor, responda a pergunta!");
+            } else if (answer === correctAnswer) {
+                // Resposta correta, redireciona para o link da música
+                window.location.href = "https://www.youtube.com/watch?v=https://youtu.be/hlAjJAlN7u0?si=zudMawhm2RsmWYBJ";
+            } else {
+                // Resposta incorreta, mensagem de erro
+                alert("Resposta incorreta! Tente novamente.");
+            }
+        }
+    </script>
+</body>
+</html>
