@@ -7,7 +7,7 @@
     <script>
         // Função que verifica a resposta
         function verificarResposta() {
-            var resposta = document.getElementById("resposta").value.trim(); // Remove espaços extras
+            var resposta = document.getElementById("sim").value.trim(); // Remove espaços extras
             var respostaCerta = "sim";  // A resposta correta é "sim"
 
             // Converte ambas as respostas para minúsculas para comparar corretamente
@@ -23,7 +23,7 @@
 </head>
 <body>
     <h1>Você aceita ouvir uma música? Sim ou não?</h1> <!-- Sua pergunta -->
-    <input type="text" id="resposta" placeholder="Digite sua resposta aqui"> <!-- Campo para digitar a resposta -->
+    <input type="text" id="sim" placeholder="Digite sua resposta aqui"> <!-- Campo para digitar a resposta -->
     <button onclick="verificarResposta()">Enviar</button> <!-- Botão que chama a função para verificar -->
 </body>
 </html>
