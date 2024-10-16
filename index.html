@@ -1,47 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surpresa para você</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        input {
-            padding: 10px;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Oi, gatinha! Tenho uma surpresa pra vc:</h1>
-    <p>Aceita ouvir uma musica?Responda com sim ou nao</p>
-    <input type="text" id="answer" placeholder="Digite sua resposta aqui">sim
-    <button onclick="submitAnswer()">Responder</button>
-
+    <title>Surpresa para Renatha</title>
     <script>
-        function submitAnswer() {
-            var answer = document.getElementById('answer').value.trim().toLowerCase();
-            var correctAnswer = "oasis";  // Resposta correta aqui
+        // Função que verifica a resposta
+        function verificarResposta() {
+            var resposta = document.getElementById("resposta").value; // Pega o texto digitado
+            var respostaCerta = "sim";  // A resposta correta é "sim"
 
-            if (answer === "") {
-                alert("Por favor, responda a pergunta!");
-            } else if (answer === correctAnswer) {
-                // Resposta correta, redireciona para o link da música
-                window.location.href = "https://www.youtube.com/watch?v=https://youtu.be/hlAjJAlN7u0?si=zudMawhm2RsmWYBJ";
+            if (resposta.toLowerCase() === respostaCerta.toLowerCase()) {
+                // Se a resposta estiver certa, redireciona para o YouTube
+                window.location.href = "https://www.youtube.com/watch?v=link_da_musica";  // Coloque o link da música aqui
             } else {
-                // Resposta incorreta, mensagem de erro
-                alert("Resposta incorreta! Tente novamente.");
+                // Se a resposta estiver errada, mostra uma mensagem de erro
+                alert("Resposta incorreta. Tente novamente!");
             }
         }
     </script>
+</head>
+<body>
+    <h1>Você aceita ouvir uma música? Sim ou não?</h1> <!-- Sua pergunta -->
+    <input type="text" id="resposta" placeholder="Digite sua resposta aqui"> <!-- Campo para digitar a resposta -->
+    <button onclick="verificarResposta()">Enviar</button> <!-- Botão que chama a função para verificar -->
 </body>
 </html>
+
