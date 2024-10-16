@@ -7,12 +7,13 @@
     <script>
         // Função que verifica a resposta
         function verificarResposta() {
-            var resposta = document.getElementById("resposta").value; // Pega o texto digitado
+            var resposta = document.getElementById("resposta").value.trim(); // Remove espaços extras
             var respostaCerta = "sim";  // A resposta correta é "sim"
 
+            // Converte ambas as respostas para minúsculas para comparar corretamente
             if (resposta.toLowerCase() === respostaCerta.toLowerCase()) {
                 // Se a resposta estiver certa, redireciona para o YouTube
-                window.location.href = "https://www.youtube.com/watch?v=link_da_musica";  // Coloque o link da música aqui
+                window.location.href = "https://youtu.be/hlAjJAlN7u0?si=zudMawhm2RsmWYBJ";  // Coloque o link da música aqui
             } else {
                 // Se a resposta estiver errada, mostra uma mensagem de erro
                 alert("Resposta incorreta. Tente novamente!");
@@ -26,4 +27,3 @@
     <button onclick="verificarResposta()">Enviar</button> <!-- Botão que chama a função para verificar -->
 </body>
 </html>
-
